@@ -1,26 +1,12 @@
 <template>
-  <div id="app" class="flex h-screen">
+  <div class="flex">
     <Sidebar />
-    <div class="flex-1 overflow-y-auto">
+    <main class="flex-1 p-6">
       <router-view />
-    </div>
+    </main>
   </div>
 </template>
 
-<script>
+<script setup>
 import Sidebar from './components/Sidebar.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Sidebar,
-  },
-}
 </script>
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-</style>
