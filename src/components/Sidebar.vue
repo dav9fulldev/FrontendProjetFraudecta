@@ -64,7 +64,60 @@ export default {
 </script>
 
 <style scoped>
-.nav-link.active {
-  background-color: #0d6efd;
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #1f1f1f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover,
+.router-link-active {
+  background-color: #007bff;
+  color: white;
+}
+
+.logout {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.logout a {
+  color: #ff6b6b;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 </style>
