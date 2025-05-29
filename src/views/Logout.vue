@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Logout',
+  name: 'LogoutV',
   mounted() {
     // 1. Effacer les données de session ou token (ajuste selon ton stockage)
     localStorage.removeItem('user') // ou sessionStorage.clear()
