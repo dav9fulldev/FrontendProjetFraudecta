@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>À propos de VerifIA</h1>
+    <h1>À propos de Fraudecta</h1>
     <p>
       Fraudecta est une application de détection automatique de documents falsifiés à l'aide de
       l'intelligence artificielle.
