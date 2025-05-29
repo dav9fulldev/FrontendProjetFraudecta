@@ -1,46 +1,70 @@
 <template>
-  <aside class="w-64 bg-gray-200 h-screen p-4">
-    <h1 class="text-xl font-bold mb-4">AI Doc Checker</h1>
-    <ul class="space-y-4">
-      <li>
-        <router-link to="/" class="block p-2 rounded hover:bg-gray-300">
-          🏠 Tableau de bord
+  <div
+    class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+    style="width: 280px; height: 100vh"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+    >
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap" /></svg>
+      <span class="fs-4">AI DocCheck</span>
+    </a>
+    <hr />
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <router-link to="/dashboard" class="nav-link text-white" active-class="active">
+          <i class="bi bi-house-door me-2"></i> Accueil
         </router-link>
       </li>
       <li>
-        <router-link to="/verify" class="block p-2 rounded hover:bg-gray-300">
-          📄 Vérifier un document
+        <router-link to="/verify" class="nav-link text-white" active-class="active">
+          <i class="bi bi-shield-check me-2"></i> Vérifier
         </router-link>
       </li>
       <li>
-        <router-link to="/history" class="block p-2 rounded hover:bg-gray-300">
-          📚 Historique
+        <router-link to="/history" class="nav-link text-white" active-class="active">
+          <i class="bi bi-clock-history me-2"></i> Historique
         </router-link>
       </li>
       <li>
-        <router-link to="/profile" class="block p-2 rounded hover:bg-gray-300">
-          👤 Profil
+        <router-link to="/profile" class="nav-link text-white" active-class="active">
+          <i class="bi bi-person-circle me-2"></i> Profil
         </router-link>
       </li>
       <li>
-        <router-link to="/about" class="block p-2 rounded hover:bg-gray-300">
-          ℹ️ À propos
-        </router-link>
-      </li>
-      <li>
-        <router-link
-          to="/login"
-          class="block p-2 rounded hover:bg-gray-300 text-red-600 font-semibold"
-        >
-          🚪 Déconnexion
+        <router-link to="/about" class="nav-link text-white" active-class="active">
+          <i class="bi bi-info-circle me-2"></i> À propos
         </router-link>
       </li>
     </ul>
-  </aside>
+    <hr />
+    <div class="dropdown">
+      <router-link
+        to="/logout"
+        class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+      >
+        <img
+          src="https://via.placeholder.com/32"
+          alt=""
+          width="32"
+          height="32"
+          class="rounded-circle me-2"
+        />
+        <strong>Déconnexion</strong>
+      </router-link>
+    </div>
+  </div>
 </template>
 
+<script>
+export default {
+  name: 'SidebarV',
+}
+</script>
+
 <style scoped>
-.router-link-exact-active {
-  background-color: #4b4f55;
+.nav-link.active {
+  background-color: #0d6efd;
 }
 </style>
