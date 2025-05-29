@@ -45,8 +45,8 @@
         class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
       >
         <img
-          src="https://via.placeholder.com/32"
-          alt=""
+          :src="gravatarUrl"
+          alt="Photo de profil"
           width="32"
           height="32"
           class="rounded-circle me-2"
@@ -58,66 +58,28 @@
 </template>
 
 <script>
+import md5 from 'crypto-js/md5'
+
 export default {
   name: 'SidebarV',
+  data() {
+    return {
+      email: 'broudavid505@gmail.com',
+    }
+  },
+  computed: {
+    gravatarUrl() {
+      const hash = md5(this.email.trim().toLowerCase()).toString()
+      return `https://www.gravatar.com/avatar/${hash}?s=64&d=identicon`
+    },
+  },
 }
 </script>
 
 <style scoped>
-.sidebar {
-  width: 240px;
-  height: 100vh;
-  background-color: #1f1f1f;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  position: fixed;
-}
-
-.brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 1rem 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.nav-links a:hover,
 .router-link-active {
-  background-color: #007bff;
-  color: white;
-}
-
-.logout {
-  border-top: 1px solid #333;
-  padding-top: 1rem;
-}
-
-.logout a {
-  color: #ff6b6b;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  background-color: #0d6efd !important;
+  color: white !important;
+  border-radius: 0.375rem;
 }
 </style>
