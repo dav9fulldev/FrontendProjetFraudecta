@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <h2 class="text-xl font-semibold">Vérification de document</h2>
-    <input type="file" @change="handleFile" class="my-4" />
-    <div v-if="loading">Veuillez patientez svp...</div>
-    <div v-if="result">
-      Résultat : <strong>{{ result }}</strong>
-    </div>
+  <div class="verify">
+    <h1>Vérification de document</h1>
+    <p>Sélectionnez un fichier à analyser pour détecter les falsifications.</p>
+
+    <form @submit.prevent="verifyDocument">
+      <input type="file" @change="handleFile" />
+      <button type="submit" :disabled="!selectedFile">Lancer la vérification</button>
+    </form>
+
+    <div v-if="result" class="result">Résultat : {{ result }}</div>
   </div>
 </template>
 
@@ -13,21 +16,40 @@
 export default {
   data() {
     return {
+      selectedFile: null,
       result: null,
-      loading: false,
     }
   },
   methods: {
     handleFile(event) {
-      this.loading = true
-      const file = event.target.files[0]
-      setTimeout(() => {
-        // Simulation d'analyse IA
-        this.result =
-          Math.random() > 0.5 ? 'Votre document valide ✅' : 'Votre document falsifié ❌'
-        this.loading = false
-      }, 2000)
+      this.selectedFile = event.target.files[0]
+    },
+    verifyDocument() {
+      // Simulation temporaire
+      this.result = 'Document valide (simulation)'
     },
   },
 }
 </script>
+
+<style scoped>
+.verify {
+  padding: 2rem;
+}
+form {
+  margin-top: 1rem;
+}
+.result {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+}
+</style>
