@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <h1>Bienvenue sur VerifIA</h1>
+    <h1>Tableau de bord</h1>
     <p>
       Ceci est votre tableau de bord. Accédez rapidement aux fonctionnalités clés de l'application.
     </p>
