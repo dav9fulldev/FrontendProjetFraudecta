@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from '@/layouts/MainLayout.vue'
-//import Dashboard from '../views/Dashboard.vue'
+import Dashboard from '../views/Dashboard.vue'
 import Verify from '../views/Verify.vue'
 import History from '../views/History.vue'
 import Profile from '../views/Profile.vue'
@@ -14,7 +14,7 @@ const routes = [
     component: MainLayout,
     children: [
       { path: '', redirect: 'dashboard' }, // Redirection vers /dashboard
-      //{ path: 'dashboard', component: Dashboard },
+      { path: 'dashboard', component: Dashboard },
       { path: 'verify', component: Verify },
       { path: 'history', component: History },
       { path: 'profile', component: Profile },

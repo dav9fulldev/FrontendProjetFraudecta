@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
-    style="width: 280px; height: 100vh"
-  >
+  <div class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
     <a
       href="/"
       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
@@ -77,6 +74,11 @@ export default {
 </script>
 
 <style scoped>
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+}
+
 .router-link-active {
   background-color: #0d6efd !important;
   color: white !important;

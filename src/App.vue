@@ -1,12 +1,11 @@
 <template>
-  <div class="flex">
-    <Sidebar />
-    <main class="flex-1 p-6">
-      <router-view />
-    </main>
-  </div>
+  <router-view />
 </template>
 
 <script setup>
-import Sidebar from './components/Sidebar.vue'
+// Aucun import nécessaire ici
 </script>
+
+<style>
+/* Tu peux ajouter ici des styles globaux si besoin */
+</style>
