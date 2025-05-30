@@ -50,6 +50,6 @@ button {
   border: none;
   background: #007bff;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 </style>
