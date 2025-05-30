@@ -45,11 +45,12 @@ form {
   color: green;
 }
 button {
-  margin-top: 0.5rem;
-  padding: 0.6rem 1rem;
-  border: none;
-  background: #007bff;
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #007bff;
   color: white;
-  border-radius: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 </style>
