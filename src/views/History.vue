@@ -28,9 +28,9 @@ export default {
   data() {
     return {
       mockHistory: [
-        { name: 'carte_id.pdf', date: '28/05/2025', status: 'Valide' },
-        { name: 'diplome.jpg', date: '27/05/2025', status: 'Falsifié' },
-        { name: 'releve_notes.png', date: '26/05/2025', status: 'Valide' },
+        { name: 'diplome1.png', date: '28/05/2025', status: 'Valide' },
+        { name: 'diplome2.jpg', date: '27/05/2025', status: 'Falsifié' },
+        { name: 'diplome3.png', date: '26/05/2025', status: 'Valide' },
       ],
     }
   },
@@ -40,24 +40,67 @@ export default {
 <style scoped>
 .history {
   padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.table-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
 }
-th,
-td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
+
+th {
+  background-color: #f0f2f5;
   text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ddd;
 }
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  min-width: 100px;
+}
+
 .valid {
-  color: green;
-  font-weight: bold;
+  background-color: #d4edda;
+  color: #155724;
 }
+
 .invalid {
-  color: red;
-  font-weight: bold;
+  background-color: #f8d7da;
+  color: #721c24;
 }
 </style>

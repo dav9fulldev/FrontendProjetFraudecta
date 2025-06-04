@@ -8,10 +8,10 @@
 export default {
   name: 'LogoutV',
   mounted() {
-    // 1. Effacer les données de session ou token (ajuste selon ton stockage)
-    localStorage.removeItem('user') // ou sessionStorage.clear()
+    //Effacer les données de session ou token (ajuste selon ton stockage)
+    localStorage.removeItem('user')
 
-    // 2. Rediriger vers la page de connexion
+    //Rediriger vers la page de connexion
     this.$router.push('/login')
   },
 }
