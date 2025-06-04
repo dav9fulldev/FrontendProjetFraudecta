@@ -1,85 +1,100 @@
 <template>
   <div class="login-page">
-
     <header class="login-header">
       <img src="/logo_fraudecta.png" alt="Logo Fraudecta" class="logo" />
       <h1>Fraudecta</h1>
     </header>
 
     <div class="login-container">
-
       <div class="login-image">
         <img src="/verify-illustration.svg" alt="Illustration sécurité" />
       </div>
 
-
       <div class="login-card">
-        <h2>Connexion</h2>
-        <form @submit.prevent="login">
+        <h2>Inscription</h2>
+        <form @submit.prevent="register">
+
+
           <div class="form-group">
             <label for="email">Email</label>
             <input v-model="email" type="email" id="email" required />
           </div>
+
           <div class="form-group">
             <label for="password">Mot de passe</label>
             <input v-model="password" type="password" id="password" required />
-            <div class="forgot-password">
-              <a href="/forgot-password">Mot de passe oublié ?</a>
-            </div>
           </div>
-          <button type="submit">Se connecter</button>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirmer le mot de passe</label>
+            <input v-model="confirmPassword" type="password" id="confirmPassword" required />
+          </div>
+
+          <button type="submit">Créer un compte</button>
         </form>
+
         <p v-if="error" class="error">{{ error }}</p>
+        <p v-if="success" class="success">{{ success }}</p>
+
         <p class="register-link">
-          Pas encore de compte ?
-          <a href="/register">S'inscrire</a>
+          Déjà inscrit ?
+          <a href="/login">Se connecter</a>
         </p>
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 import axios from 'axios'
 
 export default {
-  name: 'LoginV',
+  name: 'RegisterV',
   data() {
     return {
+      name: '',
       email: '',
       password: '',
+      confirmPassword: '',
       error: null,
+      success: null,
     }
   },
   methods: {
-    async login() {
+    async register() {
       this.error = null
+      this.success = null
+
+      if (this.password !== this.confirmPassword) {
+        this.error = "Les mots de passe ne correspondent pas."
+        return
+      }
+
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/token/', {
+        const response = await axios.post('http://127.0.0.1:8000/api/register/', {
+
           email: this.email,
-          password: this.password,
+          password: this.password
         })
 
-        // Sauvegarde du token dans localStorage
-        localStorage.setItem('access_token', response.data.access)
-        localStorage.setItem('refresh_token', response.data.refresh)
-
-        // Redirection
-        this.$router.push('/dashboard')
-
+        if (response.status === 201 || response.status === 200) {
+          this.success = "Inscription réussie ! Redirection en cours..."
+          setTimeout(() => {
+            this.$router.push('/login')
+          }, 2000)
+        }
       } catch (err) {
-        if (err.response && err.response.status === 401) {
-          this.error = "Email ou mot de passe incorrect."
+        if (err.response && err.response.data) {
+          this.error = err.response.data.error || "Une erreur est survenue."
         } else {
-          this.error = "Erreur lors de la connexion. Veuillez réessayer."
+          this.error = "Erreur de connexion au serveur."
         }
       }
-    },
-  },
+    }
+  }
 }
-</script>
 
+</script>
 
 <style scoped>
 .login-page {
@@ -221,4 +236,9 @@ button:hover {
   text-decoration: underline;
 }
 
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 1rem;
+}
 </style>
