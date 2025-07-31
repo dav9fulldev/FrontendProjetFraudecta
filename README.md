@@ -43,3 +43,27 @@ src/
 │   └── Login.vue
 ├── App.vue
 └── main.js
+```
+
+## 🔗 Backend associé
+➡️ Le dépôt du backend est disponible ici : https://github.com/Abdoul-ka/banckendProjetFraudecta.git
+
+## 📸 Aperçu du projet
+
+
+
+## 📦 Installation locale
+```
+# 1. Cloner le dépôt
+git clone https://github.com/dav9fulldev/FrontendProjetFraudecta.git
+
+# 2. Accéder au dossier
+cd FrontendProjetFraudecta
+
+# 3. Installer les dépendances
+npm install
+
+# 4. Lancer le serveur local
+npm run dev
+```
+
