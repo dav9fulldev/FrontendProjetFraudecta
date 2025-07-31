@@ -53,17 +53,22 @@ src/
 
 
 ## 📦 Installation locale
+
+### 1. Cloner le dépôt
 ```
-# 1. Cloner le dépôt
 git clone https://github.com/dav9fulldev/FrontendProjetFraudecta.git
+```
 
-# 2. Accéder au dossier
+### 2. Accéder au dossier
+```
 cd FrontendProjetFraudecta
-
-# 3. Installer les dépendances
+```
+### 3. Installer les dépendances
+```
 npm install
-
-# 4. Lancer le serveur local
+```
+### 4. Lancer le serveur local
+```
 npm run dev
 ```
 
