@@ -1,35 +1,37 @@
-# FrontEnd_FraudEcta
+# Fraudecta – Détection de Documents Falsifiés 📄🔍
 
-This template should help get you started developing with Vue 3 in Vite.
+## 🧠 Contexte
+**Fraudecta** est une application web conçue pour détecter les documents falsifiés (factures, cartes d'identité, certificats, etc.). Le but est de renforcer la sécurité documentaire dans des secteurs comme la finance, l’administration ou le recrutement.
 
-## Recommended IDE Setup
+Ce dépôt correspond à la **partie Frontend**, développée avec **Vue.js**, dans le cadre d’un projet collaboratif en binôme.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 👨‍💻 Mon rôle
+- Développement complet de l’interface utilisateur (UI) avec Vue.js
+- Intégration responsive (mobile et desktop)
+- Connexion avec les endpoints du backend via Axios
+- Mise en place de la navigation avec Vue Router
+- Contribution à l’expérience utilisateur (UX)
 
-## Customize configuration
+## 🛠️ Stack technique
+- Vue.js 3 (Composition API)
+- HTML5 / CSS3 / JavaScript ES6
+- Axios pour les appels API
+- Vue Router
+- Tailwind CSS, Bootstrap…
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🔗 Backend associé
+➡️ Le dépôt du backend est disponible ici : [mettre le lien s’il existe]
 
-## Project Setup
+## 📸 Aperçu du projet
+*(Ajoutez ici une capture de l’écran d’accueil, d’un formulaire de vérification, etc.)*
 
-```sh
+## 📦 Installation locale
+
+```bash
+# 1. Installer les dépendances
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 2. Lancer le serveur local
 npm run dev
-```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
