@@ -20,7 +20,7 @@ Ce dépôt correspond à la **partie Frontend**, développée avec **Vue.js**, d
 - Tailwind CSS, Bootstrap…
 
 ## 🔗 Backend associé
-➡️ Le dépôt du backend est disponible ici : [mettre le lien s’il existe]
+➡️ Le dépôt du backend est disponible ici : https://github.com/Abdoul-ka/banckendProjetFraudecta.git
 
 ## 📸 Aperçu du projet
 *(Ajoutez ici une capture de l’écran d’accueil, d’un formulaire de vérification, etc.)*
