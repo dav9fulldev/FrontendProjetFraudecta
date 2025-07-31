@@ -19,19 +19,27 @@ Ce dépôt correspond à la **partie Frontend**, développée avec **Vue.js**, d
 - Vue Router
 - Tailwind CSS, Bootstrap…
 
-## 🔗 Backend associé
-➡️ Le dépôt du backend est disponible ici : https://github.com/Abdoul-ka/banckendProjetFraudecta.git
-
-## 📸 Aperçu du projet
-*(Ajoutez ici une capture de l’écran d’accueil, d’un formulaire de vérification, etc.)*
-
-## 📦 Installation locale
+## 📁 Structure du projet
 
 ```bash
-# 1. Installer les dépendances
-npm install
-
-# 2. Lancer le serveur local
-npm run dev
-
-
+src/
+├── components/
+│   ├── DocumentVerifier.vue
+│   ├── HistoryList.vue
+│   ├── Sidebar.vue
+│   └── UserProfile.vue
+├── Layouts/
+│   └── MainLayout.vue
+├── router/
+│   └── index.js
+├── Views/
+│   ├── About.vue
+│   ├── DashboardF.vue
+│   ├── History.vue
+│   ├── Logout.vue
+│   ├── Profile.vue
+│   ├── Register.vue
+│   ├── VerifyDoc.vue
+│   └── Login.vue
+├── App.vue
+└── main.js
